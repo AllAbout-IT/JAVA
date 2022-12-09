@@ -8,9 +8,7 @@
  * @since 2022.12.09~
  */
 
-package NOTE.DAY02;
-
-public class Comments {
+public class I_CommentExample {
   /*
   main함수(메서드)는 프로그램을 실행하기 위해 반드시 작성해야 하는 함수(메서드)입니다.
 
@@ -51,4 +49,4 @@ public class Comments {
 
     • 공백(Whitespace)은 빈칸, 탭, 빈 줄 등이 있으며, 이러한 공백은 소스 코드를 보기 좋게 하고 알아보기 쉽게 하는데 사용됨.
    */
-} 
+}
