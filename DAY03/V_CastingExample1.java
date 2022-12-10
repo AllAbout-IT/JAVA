@@ -13,5 +13,7 @@ public class V_CastingExample1 {
     int k = 500;
     double d = k; //int -> double 자동 형 변환
     System.out.println(d);
+
+     
   }
 }
