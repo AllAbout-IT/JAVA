@@ -1,7 +1,8 @@
 {
   "DockerRun.DisableDockerrc": true,
   "java.project.sourcePaths": [
+    "DAY02",
     "DAY01",
-    "DAY02"
+    "DAY03"
   ]
 }
