@@ -38,7 +38,7 @@ public class III_TextualExample {
      System.out.println(s1 + s2);
 
 
-     System.out.println("--------------------");;
+     System.out.println("--------------------");
      //문자와 다른 데이터타입과의 + 연산
 
      System.out.println(100 + 200);
@@ -58,7 +58,23 @@ public class III_TextualExample {
      System.out.println('A' + 10);
      // char는 2byte int는 4byte다 이때 작은 바이트수는 큰바이트따라서 'A'는 int형으로 바뀌어서 연산된다.
 
+     System.out.println("--------------------");
+     // String클래스를 이용해서 변수선언
+     String e1 = "Hello"; // 변수선언 및 할당
+     System.out.println(e1);
      
+     String e2 = new String("Hello"); //객체 생성
+     System.out.println(e2);
 
+     String e3; // s3는 디폴트 값 null, 길이를 알 수 없음
+     // System.out.println(e3);
+
+     String e4 = "";  // null string, 길이가 0임
+     System.out.println(e4);
+
+     String e5 = " "; //  blank string, 길이가 0이 아님
+     System.out.println(e5);  
+
+     System.out.println("--------------------");
   }
 }
