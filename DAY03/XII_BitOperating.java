@@ -65,6 +65,14 @@ public class XII_BitOperating {
      int i = 192;
      System.out.println(i << 3);
      System.out.println(i >> 2);
+     /*
+      int i = 192;
+      00000000 00000000 00000000 11000000
+
+      i >> 2
+      00000000 00000000 00000000 00110000
+      48 
+      */
    
   }
 }
