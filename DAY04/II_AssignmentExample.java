@@ -25,7 +25,7 @@ public class II_AssignmentExample {
      System.out.println("a: " + a);
 
      a %= 3; // a = a % 3 result  a = 1
-     System.out.println("a: " + a);
+     System.out.println("a: " + a);  
   }
   
 
