@@ -1,4 +1,4 @@
-public class III_ForExample {
+public class III_ForExample1 {
   public static void main(String[] args) {
     /*
      반복문 for
@@ -21,6 +21,16 @@ public class III_ForExample {
      for(제어변수선언(begin); 논리형조건식(end); 증감식(stop)) {
       반복실행할 코드
      }
+
+     int sum = 0;
+     for(int n = 1; n <= 10; n++) {
+      sum += n;
+     }
      */
-  }
+    int sum = 0;
+    for(int n = 1; n <= 10; n++) {
+      sum += n;
+    }
+    System.out.println("누적합: " + sum);
+    
 }

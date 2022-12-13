@@ -25,16 +25,6 @@ public class II_DoWhileExample  {
       n++;
     }while(n <= target);
 
-    /*
-    [while문]
-     제어번수 선언(begin)
-     while (논리형 조건식(end)
-      반복실행할 코드
-      증김식(stop)
-
-    [for문]
-     */
-
     System.out.println("1부터 " + target + "까지의 누적합계" + sum);
     scan.close();
   }
