@@ -11,7 +11,7 @@ public class VIV_ContinueExample1 {
         continue;
         // 조건을 만족하면 반복문의 맨 처음으로 돌아가 다음 반복문을 실행한다. 따라서 1 == 5일때 출력은 실행 되지 않는다.
       } 
-      System.out.print(i + " ");
+      System.out.print(i + " ") ;
     }
     System.out.println();    
     System.out.println("=======================");
