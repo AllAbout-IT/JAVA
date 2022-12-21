@@ -61,20 +61,61 @@ public class CustomerManager {
       case 'p':
         index--;
         // 이전 고객의 정보를 보는 것이기 때문에 index에서 '--'후위연산을 적용한다.
-        printData(index); 
+
+        // printData(index); 
+        // System.out.println("\n 이전 고객정보를 조회합니다.");
+        // break;
+
+        // 위 상황에서 index[0]일때 'p'을 누구게 된다면 index[-1]이 된다. java에서는 배열의 주소값이 음수가 되면 에러를 발생하고 프로그램에서 튕기게 된다. 따라서 위와 같은 상황을 방지 하기 위함 프로그래밍이 필요하다. 
+        
         System.out.println("\n 이전 고객정보를 조회합니다.");
+        if(index <= 0) {
+          System.out.println("이전 고객정보가 존재하지 않습니다.");
+        }else {
+          index--;
+          printData(index);
+        } 
         break;
+
+        // 배열의 주소값이 0이거나 작을 경유에 pritData()를 호출하지 않고 안내문 후에 case문을 탈출한다.
+
       case 'ㅜ':
       case 'n':
         index++;
         // 다음 고객의 정보를 보는 것이기 대문에 index에서 '++'후위연산을 적용한다.
-        printfData(index);
+
+        // printData(index);
+        // System.out.println("\n다음 고객정보를 조회합니다.");
+        // break;
+
+        // 위 상황에서 고객에 정보가 없는 주소에서는 모든 정보값이 'null'로 표기 되기 때문에 사용자 입장에서는 프로그램에 문제가 생겼다고 판단할수 있다. 따라서 정보가 없는 주소값에 접근 할수 없도록 프로그래밍이 필요하다.
+
         System.out.println("\n다음 고객정보를 조회합니다.");
+        if(index > count) {
+          System.out.println("다음 고객정보가 존재하지 않습니다.");
+        } else {
+          index++;
+          printData(index);
+        }
         break;
+        // 검색하려는 배열의 주소값(index)이 새로운 정보가 입력된 배열 주소값(count)과 같거나 크면 printData()메서드를 가지 않고 if문을 빠져와서 case문을 안내출력문구와 함께 case문을 탈출한다.
+
       case 'ㅊ':
       case 'c':
-        System.out.println("\n현재 고객 정보를 조회합니다.");
+        // System.out.println("\n현재 고객 정보를 조회합니다.");
+        // break;
+
+        // 위의 프로그래밍은 프로그램을 처음 구동하여 저장된 정보가 아무것도 없을때 실행이 되면 열람하려는 배열의 주소값이 '-1'이 되면서 에러가 나고 프로그램에서 튕기게 된다. 따라서 이러한 에러 방지를 위한 프로그래밍이 필요하다.
+
+        System.out.println("\n현재 고객정보를 조회합니다.");
+        if(index >= 0 && index < count) {
+          printData(index);
+        } else {
+          System.out.println("현재 고객정보가 존재하지 않습니다.");
+        }
         break;
+        // 검색하려는 배열의 주소가 0과 같거나 크고(배열의 주소가 음수'-1'이 아니어야 한다.) 검색하려는 배열의 주소값(index)이 저장된 배열의 주소값(count)보다 작아야 된다는 조건이 모두 만족(&&, and) 했을 때만 printData()메서드가 실행된다.
+      
       case 'ㅕ':
       case 'u':
         System.out.println("\n현재 고객정보를 수정합니다.");
