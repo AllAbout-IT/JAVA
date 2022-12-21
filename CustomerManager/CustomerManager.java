@@ -53,6 +53,7 @@ public class CustomerManager {
          */
         // inderData를 불러온다.
         insertData();
+        index++;
         System.out.println("고객정보가 정상적으로 입력되었습니다.");
         //nameList는 내열 내부의 정보를 보는 함수
         System.out.println(Arrays.toString(nameList));
@@ -118,8 +119,19 @@ public class CustomerManager {
       
       case 'ㅕ':
       case 'u':
-        System.out.println("\n현재 고객정보를 수정합니다.");
+        // System.out.println("\n현재 고객정보를 수정합니다.");
+        // updateData(index);
+        // break;
+        // 위 case도 'c'case와 같은 오류가 의심이 되므로 같은 조건으로 if문을 구성
+
+        System.out.println("\n현재 고객정보를 수정 합니다.");
+        if(index  >= 0 && index < count) {
+          printData(index);
+        } else {
+          System.out.println("현재 고객정보가 존재하지 않습니다.");
+        }
         break;
+
       case 'ㅇ':
       case 'd':
         System.out.println("\n현재 고객정보를 삭제합니다.");
@@ -174,10 +186,45 @@ public class CustomerManager {
    public static void printData(int index) {
     System.out.println("\n======고객 정보======");
     System.out.println("이름: " + nameList[index]);
+    System.out.println("성별: " + genderList[index]);
     System.out.println("이메일: " + emailList[index]);
     System.out.println("출생연도: " + birthList[index]);
     System.out.println("============================");
-   }
+    } //printData() end
 
+    // 고객 정보를 수정하는 메서드 선언
+    public static void updateData(int index) {
+      System.out.println("\n========고객정보수정========");
+
+      //새로운 정보들을 입력받아 각각의 배열의 수정 위치 인덱스에 있는 데이터를 변경시킨다. 수정시에는 수정전의 정보들이 출력되도록 하세요.
+      // ex> 이름(홍길동): ______
+
+      System.out.printf("이름(%s) ", nameList[index]);
+      // 타겟이 된 배열주소에 저장된 값이 수정되기전에 '%s'에 출력된다
+      // 문자열이기 때문에 '%s(string)'로 매치한다.
+      // String name = scan.next();
+      // // name에 새로운 값을 받는다.
+      // nameList[index] = name;
+      // // 새로운 값은 타겟이 된 배열주소에 수정되어진다.
+  
+
+      // 위의 두문장은 다음으로도 요약될수도 있다.
+      nameList[index] = scan.next();
+
+      System.out.printf("성별(%s) ", genderList[index]);
+      genderList[index] = scan.next().charAt(0);
+      // 성별 수정. 배열로 입력시 첫글자만 입력받음(charAt))
+      // 문자열이기 때문에 '%s(string)'로 매치한다.
+      
+      System.out.printf("이메일(%s) ", emailList[index]);
+      emailList[index] = scan.next();
+      // 이메일 수정
+      // 문자열이기 때문에 '%s(string)'로 매치한다.
+      
+      System.out.printf("출생년도(%d) ", birthList[index]);
+      birthList[index] = scan.nextInt();
+      // 출생년도 수정
+      // 양수로 받으므로 '%d(decimal)'로 대응하고 nextInt()함수를 사용한다.
+    }
    
 }// end class
