@@ -42,8 +42,12 @@ public class ArrayDelete {
     nameList[2] = "이순신";
     nameList[3] = "강감찬";
     System.out.println(Arrays.toString(nameList));
+    int count = 4;
+    // 변수 'count'가 저장된 값의 수를 나타낸다고 하자.
 
-    for(int i=1; i < nameList.length - 1; i++) {
+    // for(int i=1; i < nameList.length - 1; i++) {
+    for(int i=1; i < count - 1; i++) {
+    // for구문 반복의 수를 (배열의 전체 주소값 갯수의 - 1)이 아니라 (저장된 값의 수 - 1)로 변경한다면 출력되는 같지만 불필요한 연산을 막을 수 있다. 
       nameList[i] = nameList[i+1];
     }
     System.out.println(Arrays.toString(nameList));
