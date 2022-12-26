@@ -134,9 +134,16 @@ public class CustomerManager {
 
       case 'ㅇ':
       case 'd':
+
         System.out.println("\n현재 고객정보를 삭제합니다.");
+        if(index  >= 0 && index < count) {
+          deleteData(index);
+        } else {
+          System.out.println("현재 고객정보가 존재하지 않습니다.");
+        }
         break;
-      case 'ㅂ':
+
+      case 'ㅂ': 
       case 'q':
         System.out.println("\n프로그램을 종료합니다. ");
         scan.close(); 
@@ -227,4 +234,17 @@ public class CustomerManager {
       // 양수로 받으므로 '%d(decimal)'로 대응하고 nextInt()함수를 사용한다.
     }
    
+  //삭제 메서드
+  public static void deleteData(int index) {
+    for(int i = index; i<count-1; i++) {
+      // i(삭제 하고자 하는 값의 배열 주소값)이 count(저장된 값의 개수)에서 -1한 수가 될때 까지 1씩 증가하며 반복.
+      nameList[i] = nameList[i+1];
+      // 배열의 주소'i'의 값은 주소'i+1'의 값에 대체 된다.
+      genderList[i] = genderList[i+1];
+      emailList[i] = emailList[i+1];
+      birthList[i] = birthList[i+1];
+    }
+    count--;
+    // 삭제로 인해 저장된 값의 주소의 수도 줄어든다.
+  }
 }// end class
