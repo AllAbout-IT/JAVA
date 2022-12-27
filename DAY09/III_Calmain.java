@@ -21,6 +21,7 @@ public class III_Calmain {
     System.out.println("2번 계산기 결과값: " + c2.result);
     System.out.println("3번 계산기 결과값: " + c3.result);
 
+    
     // 계산기에 기능이 되는 메소드 부분을 객체지향방식으로 분리한 결과 계산기의 main 코드에서 불필요한 반복과 복잡한 코드가 사라지게 되었다.
   }
 }
