@@ -1,0 +1,25 @@
+
+1. 객체와 클래스
+
+<modifiers> <type> <bariableName>;
+
+> modifiers: 제한자로서 piblic, ㅔ갯ㄷㅊㅅㄷㅇ, default(공백), private 등의 접근제한자(Access Level)와 final, static, transient등의 Usage Level 제한자가 있습니다. 자세한 설명은 뒤에서 하고 접근제한자에 대하여 간단하게 설명하면 다음과 같습니다.
+
+- public : 같은 패키지(package)가 아니어도 어느 클래스에서나 참조 가능하도록 합니다.
+- protected: 같은 패키지내의 클래스에서만 참조 가능합니다. 자식 클래스가 다른 패키지에 있을 경우, 그 자식 클래스도 참조 가능합니다.
+- default : 같은 패키지내의 클래스에서만 참조 가능합니다.
+- private : 같은 클래스 내에서만 참조 가능합니다.
+
+> type : 기본데이터 타입 뿐만 아니라 배열과 클래스도 데이터 타입으로 사용할 수 있습니다. 자바에서의 기본데이터 타입은 정수형(byte, short, int, long), 부동소수점형(float, double), 논리형(boolean), 문자형(char)이 있습니다. 
+
+• 멤버변수(Member Variable)
+  • 클래스안에서 선언 된 변수
+  • 객체를 생성할 때 각 데이터 타입의 기본 값으로 자동 초기화
+  • 기본 값: 정수형 0, 부동소수점형 0.0, 논리형 false, 객체 null
+
+• 지역변수(Local Variable)
+  • Automatic variable
+  • 메서드안에서 선언된 변수
+  • 사용하기 전에 반드시 초기화 해야함
+
+  

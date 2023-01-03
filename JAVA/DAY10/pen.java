@@ -1,7 +1,7 @@
 package JAVA.DAY10;
 
 //설계용 클래스(라이브러리 클래스)는 메인메서드를 작성하지 않습니다.
-public class pen {
+public class Pen {
 
   // 객체의 속성을 나타내느 것을 필드(멤버 변수)라고 부릅니다.
   String color;
