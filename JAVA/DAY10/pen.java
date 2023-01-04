@@ -7,6 +7,12 @@ public class Pen {
   String color;
   int price;
 
+  Pen(String c) {
+
+  }
+
+
+
   //객체의 기능을 나타내는 것을 메서드(멤버 함수)라고 부릅니다.
 
   void write() {
